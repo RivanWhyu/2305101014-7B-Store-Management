@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboard"
+        android:title="Dashboard"
+        android:icon="@drawable/baseline_home_24"/>
+
+    <item
+        android:id="@+id/produk"
+        android:title="Produk"
+        android:icon="@drawable/outline_deployed_code_24"/>
+
+
+    <item
+        android:id="@+id/fab"
+        android:title=""
+        android:enabled="false"/>
+
+
+    <item
+        android:id="@+id/riwayat"
+        android:title="Riwayat"
+        android:icon="@drawable/outline_history_24"/>
+
+    <item
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/outline_person_24"/>
+
+</menu>

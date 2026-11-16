@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFF"
+    android:fillViewport="true"
+    android:clipToPadding="false"
+    android:paddingBottom="90dp"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER DASHBOARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:background="@drawable/bg_dashboard_header"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="35dp"
+            android:paddingBottom="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Selamat Datang"
+                        android:textColor="#FFFFFF"
+                        android:textSize="23sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kasir Toko"
+                        android:textColor="#FFFFFF"
+                        android:textSize="34sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- ICON TOKO: opsional -->
+                <ImageView
+                    android:id="@+id/imgStore"
+                    android:layout_width="76dp"
+                    android:layout_height="76dp"
+                    android:src="@drawable/outline_deployed_code_24"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Ikon toko"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- CONTENT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="-30dp"
+            android:background="@drawable/bg_content_sheet"
+            android:paddingStart="18dp"
+            android:paddingEnd="18dp"
+            android:paddingTop="22dp">
+
+            <!-- TOTAL OMZET -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:background="@drawable/bg_card_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                android:elevation="3dp">
+
+                <!-- ICON TOTAL OMZET -->
+                <ImageView
+                    android:id="@+id/imgTotalOmset"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:src="@drawable/outline_bar_chart_4_bars_24"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Ikon omzet"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingStart="14dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Omzet Harian"
+                        android:textColor="@color/dashboard_gray"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/txtTotalOmset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp 1.250.000"
+                        android:textColor="@color/dashboard_text"
+                        android:textSize="23sp"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:includeFontPadding="false"
+                        android:autoSizeTextType="uniform"
+                        android:autoSizeMinTextSize="15sp"
+                        android:autoSizeMaxTextSize="23sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_pill_green"
+                    android:paddingHorizontal="12dp"
+                    android:paddingVertical="10dp"
+                    android:text="↑ 12%"
+                    android:textColor="@color/dashboard_green"
+                    android:textStyle="bold"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <!-- MENU CEPAT -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="18dp">
+
+                <!-- MENU KASIR -->
+                <LinearLayout
+                    android:id="@+id/btnMenuKasir"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:background="@drawable/bg_card_blue"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="10dp">
+
+                    <!-- ICON KASIR -->
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/outline_receipt_long_24"
+                        android:contentDescription="Kasir"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:text="Kasir"
+                        android:textColor="@color/dashboard_text"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- MENU PRODUK -->
+                <LinearLayout
+                    android:id="@+id/btnMenuProduk"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="6dp"
+                    android:background="@drawable/bg_card_blue"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="10dp">
+
+                    <!-- ICON PRODUK -->
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/outline_deployed_code_24"
+                        android:contentDescription="Produk"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:text="Produk"
+                        android:textColor="@color/dashboard_text"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <!-- MENU RIWAYAT -->
+                <LinearLayout
+                    android:id="@+id/btnMenuRiwayat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/bg_card_blue"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:padding="8dp">
+
+                    <!-- ICON RIWAYAT -->
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/outline_history_24"
+                        android:contentDescription="Riwayat"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Riwayat\nTransaksi"
+                        android:textAlignment="center"
+                        android:textColor="@color/dashboard_text"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- PRODUK TERLARIS -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_card_white"
+                android:elevation="2dp"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <!-- JUDUL PRODUK TERLARIS -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <!-- ICON PIALA -->
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:src="@drawable/outline_trophy_24"
+                        android:contentDescription="Produk terlaris"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="10dp"
+                        android:text="5 Produk Terlaris"
+                        android:textColor="@color/dashboard_text"
+                        android:textSize="17sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/btnLihatSemua"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_pill_blue"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="10dp"
+                        android:text="Lihat Semua →"
+                        android:textColor="@color/dashboard_blue"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coming Soon"
+                        android:textColor="@color/dashboard_gray"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Produk terlaris akan ditampilkan di sini"
+                        android:textColor="@color/dashboard_gray"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- REKOMENDASI RESTOK -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_card_warning"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:elevation="2dp">
+
+                <!-- JUDUL RESTOK -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12dp">
+
+                    <!-- ICON TANDA SERU -->
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:src="@drawable/outline_warning_24"
+                        android:contentDescription="Peringatan stok"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="Rekomendasi Produk untuk Direstok"
+                        android:textColor="#202020"
+                        android:textSize="14sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Coming Soon"
+                        android:textColor="@color/dashboard_gray"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:text="Rekomendasi stok akan ditampilkan di sini"
+                        android:textColor="@color/dashboard_gray"
+                        android:textSize="12sp"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

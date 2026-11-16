@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAFF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:scrollbars="none">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- HEADER BIRU -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:background="@drawable/bg_riwayat_header"
+                android:orientation="vertical"
+                android:paddingStart="24dp"
+                android:paddingEnd="24dp"
+                android:paddingTop="35dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kelola Penjualan"
+                            android:textColor="#DCEAFF"
+                            android:textSize="15sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Riwayat Transaksi"
+                            android:textColor="#FFFFFF"
+                            android:textSize="27sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <!-- TOMBOL FILTER TANGGAL -->
+                    <LinearLayout
+                        android:id="@+id/btnFilterTanggal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="44dp"
+                        android:background="@drawable/bg_riwayat_filter"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="19dp"
+                            android:layout_height="19dp"
+                            android:src="@drawable/outline_calendar_month_24"
+                            app:tint="#FFFFFF"
+                            android:contentDescription="Filter tanggal"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="Filter"
+                            android:textColor="#FFFFFF"
+                            android:textSize="13sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- KONTEN PUTIH MELENGKUNG -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="165dp"
+                android:background="@drawable/bg_riwayat_content"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:paddingTop="25dp"
+                android:paddingBottom="30dp">
+
+                <!-- KOLOM PENCARIAN -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:background="@drawable/bg_riwayat_search"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/outline_search_24"
+                        app:tint="#64748B"
+                        android:contentDescription="Cari transaksi"/>
+
+                    <EditText
+                        android:id="@+id/edtCariRiwayat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Cari nomor transaksi..."
+                        android:textColor="#17345C"
+                        android:textColorHint="#94A3B8"
+                        android:textSize="14sp"
+                        android:singleLine="true"
+                        android:inputType="text"
+                        android:imeOptions="actionSearch"
+                        android:padding="0dp"/>
+
+                </LinearLayout>
+
+                <!-- JUDUL DAFTAR -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Daftar Transaksi"
+                        android:textColor="#102E57"
+                        android:textSize="19sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Semua Transaksi"
+                        android:textColor="#64748B"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+                <!-- GARIS PEMBATAS -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="13dp"
+                    android:background="#E8EEF8"/>
+
+                <!-- KARTU DAFTAR TRANSAKSI -->
+                <LinearLayout
+                    android:id="@+id/cardComingSoon"
+                    android:layout_width="match_parent"
+                    android:layout_height="230dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_riwayat_card"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:layout_width="65dp"
+                        android:layout_height="65dp"
+                        android:src="@drawable/outline_history_24"
+                        app:tint="#2563EB"
+                        android:contentDescription="Ikon riwayat transaksi"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:text="Coming Soon"
+                        android:textColor="#17345C"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:gravity="center"
+                        android:text="Riwayat transaksi akan ditampilkan di sini"
+                        android:textColor="#64748B"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="14dp"
+                        android:background="@drawable/bg_riwayat_status"
+                        android:paddingHorizontal="15dp"
+                        android:paddingVertical="7dp"
+                        android:text="Dalam Pengembangan"
+                        android:textColor="#2563EB"
+                        android:textSize="11sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </ScrollView>
+
+</FrameLayout>
