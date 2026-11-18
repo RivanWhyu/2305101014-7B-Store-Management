@@ -77,7 +77,7 @@ Untuk menjalankan aplikasi ini, diperlukan beberapa perangkat lunak dan komponen
 
 Dokumentasi tampilan aplikasi disimpan pada folder:
 
-[Screenshots] (https://github.com/RivanWhyu/2305101014-7B-Store-Management/tree/main/app/src/main/res/Screenshots)
+- [Screenshots](https://github.com/RivanWhyu/2305101014-7B-Store-Management/tree/main/app/src/main/res/Screenshots)
 
 Screenshot yang dicantumkan meliputi:
 
@@ -90,8 +90,8 @@ Screenshot yang dicantumkan meliputi:
 
 Untuk melihat file dan komponen antarmuka aplikasi, silakan kunjungi:
 
-[Folder Class] (https://github.com/RivanWhyu/2305101014-7B-Store-Management/tree/main/app/src/main/java/com/example/storeapp)
-[Folder Layout] (https://github.com/RivanWhyu/2305101014-7B-Store-Management/tree/main/app/src/main/res/layout)
+- [Folder Class](https://github.com/RivanWhyu/2305101014-7B-Store-Management/tree/main/app/src/main/java/com/example/storeapp)
+- [Folder Layout](https://github.com/RivanWhyu/2305101014-7B-Store-Management/tree/main/app/src/main/res/layout)
 
 ## Referensi
 
